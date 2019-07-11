@@ -15,18 +15,18 @@ abstract class AbstractPlatformGLCanvas implements PlatformGLCanvas {
 
     protected static boolean validVersionGL(int major, int minor) {
         return (major == 0 && minor == 0) || // unspecified gets highest supported version on Nvidia
-               (major >= 1 && minor >= 0) &&
-               (major != 1 || minor <= 5) &&
-               (major != 2 || minor <= 1) &&
-               (major != 3 || minor <= 3) &&
-               (major != 4 || minor <= 5);
+                (major >= 1 && minor >= 0) &&
+                        (major != 1 || minor <= 5) &&
+                        (major != 2 || minor <= 1) &&
+                        (major != 3 || minor <= 3) &&
+                        (major != 4 || minor <= 5);
     }
 
     protected static boolean validVersionGLES(int major, int minor) {
         return (major == 0 && minor == 0) || // unspecified gets 1.1 on Nvidia
-               (major >= 1 && minor >= 0) &&
-               (major != 1 || minor <= 1) &&
-               (major != 2 || minor <= 0);
+                (major >= 1 && minor >= 0) &&
+                        (major != 1 || minor <= 1) &&
+                        (major != 2 || minor <= 0);
     }
 
     /**
@@ -101,9 +101,9 @@ abstract class AbstractPlatformGLCanvas implements PlatformGLCanvas {
         }
     }
 
-	public int checkStyle(Composite parent, int style) {
-		return style;
-	}
+    public int checkStyle(Composite parent, int style) {
+        return style;
+    }
 
-	public void resetStyle(Composite parent) {}
+    public void resetStyle(Composite parent) {}
 }
